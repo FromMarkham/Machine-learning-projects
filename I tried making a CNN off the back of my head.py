@@ -10,12 +10,19 @@ train_images,test_images=train_images/255.0,test_images/255.0
 class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
                'dog', 'frog', 'horse', 'ship', 'truck']
 
+#Conv2D.__init__() missing 2 required positional arguments: 'filters' and 'kernel_size'
 cnn_model=models.Sequential()
-cnn_model.add(layers.Conv2D())
+cnn_model.add(layers.Conv2D(1,1))
 cnn_model.add(layers.MaxPool2D())
-cnn_model.add(layers.Conv2D)
+cnn_model.add(layers.Conv2D(1,1))
 cnn_model.add(layers.MaxPool2D())
 
 cnn_model.add(layers.Flatten())
-cnn_model.add(layers.Dense())
-cnn_model.add(layers.Dense())
+cnn_model.add(layers.Dense(5))
+cnn_model.add(layers.Dense(5))
+
+cnn_model.compile()
+
+cnn_mode.fit()
+
+#https://www.tensorflow.org/tutorials/images/cnn
