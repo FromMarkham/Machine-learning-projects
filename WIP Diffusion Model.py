@@ -7,6 +7,8 @@ import tensorflow as tf
 from tensorflow.keras import layers
 
 #https://tree.rocks/make-diffusion-model-from-scratch-easy-way-to-implement-quick-diffusion-model-e60d18fd0f2e
+#https://github.com/Seachaos/Tree.Rocks/blob/main/QuickDiffusionModel/QuickDiffusionModel_torch.ipynb
+#https://github.com/Seachaos/Tree.Rocks/blob/main/QuickDiffusionModel/QuickDiffusionModel.ipynb
 #This is my first generative ML model
 
 (X_train, y_train), (X_test, y_test) = tf.keras.datasets.cifar10.load_data()
