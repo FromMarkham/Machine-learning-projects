@@ -49,14 +49,24 @@ a, b = Forward_process(X_train[:25].astype(int), t)
 
 def denoisingp1(noised_img1,noised_img2):
     img1layer=layers.Conv2D(32,32,kernel_size=3,padding='same')(noised_img1)
-    img1layer=layers.Activation('relu')(noised_img1)
+    img1layer=layers.Activation('relu')(img1layer)
 
-    img2layer=
+    img2layer=layers.Dense(128)(noised_img2)
+    img2layer=layers.Activation('relu')(img2layer)
+    img2layer=layers.Reshape((1,1,128))(img2layer)
+    
+    img3layer=img2layer*img1layer
+
+    img_out=layers.Conv2D(128,kernel_size=3,padding='same')(noised_img1)
+    img_out=img_out+img1layer
+
+    img_out=layers.LayerNormalization()(img_out)
+    img_out=layers.Activation('relu')(img_out)
     
     return img_out
 
-    
-    
+
+def mostofthemodel():
+    x=
 
 #def Forward_process(x,t);
-    
