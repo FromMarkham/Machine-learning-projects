@@ -23,6 +23,6 @@ cnn_model.add(layers.Dense(5))
 
 cnn_model.compile()
 
-cnn_mode.fit()
+cnn_model.fit(train_images,train_labels,validation_data=(test_images,test_labels),epochs=10)
 
 #https://www.tensorflow.org/tutorials/images/cnn
