@@ -5,7 +5,7 @@ ytrain=['q','w','e','r','t']
 xtest=[]
 ytest=[]
 
-mylstm=tf.keras.layers.Sequential[tf.keras.Layers.lstm(),tf.keras.layers.dense()]
+mylstm=tf.keras.layers.Sequential[tf.keras.Layers.LSTM(64,input_shape=(5,1)),tf.keras.layers.dense(1)]
 mylstm.compile(optimizer='Lion',Loss='BinaryCrossentropy',Metrics=['Accuracy','BinaryAccuracy'])
 
 mylstm.fit(xtrain,ytrain,epochs=4)
