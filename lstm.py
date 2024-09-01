@@ -1,8 +1,9 @@
 import tensorflow as tf 
 from tensorflow.keras import datasets, layers, models
 #oof gotta use an array instead next time lol 
-xtrain=[1,2,3,4,5]
-ytrain=['q','w','e','r','t']
+import numpy as np
+xtrain=np.array([1,2,3,4,5])
+ytrain=np.array(['q','w','e','r','t'])
 xtest=[]
 ytest=[]
 
