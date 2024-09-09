@@ -13,14 +13,18 @@ def UnetEncoder():
     x=layers.ZeroPadding2D()(x)
     x=layers.Conv2D(32,(3,3),activation='relu',input_shape=(32,32,3))(x)
 
+    
+    x=layers.MaxPool2D((2,2)(x)
+    
+    x=layers.Conv2D(16,(3,3),activation='relu',input_shape=(16,16,3)
     x=layers.ZeroPadding2D()(x)
-    x=layers.MaxPool2D()(x)
-    x=layers.MaxPool2D()(x)
-    x=layers.Concatenate()(x)
+    x=layers.Conv2D(16,(3,3),activation='relu',input_shape=(16,16,3))(x)
+
 
 
 def UnetDecoder():
-    y=layers.Conv2DTranspose()
+    y=layers.Conv2DTranspose()(x)
+    
 
     
 #https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/
