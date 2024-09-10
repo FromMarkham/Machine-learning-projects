@@ -23,7 +23,11 @@ def UnetEncoder():
 
 
 def UnetDecoder():
+    
     y=layers.Conv2DTranspose()(x)
+    y.concatenate(x)
+    y=layers.ZeroPadding2D()(y)
+    y=layers.Conv2D(16,(3,3),activation='relu',input_shape=(16,16,3)(y)
     
 
     
