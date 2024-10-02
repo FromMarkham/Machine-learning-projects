@@ -4,6 +4,7 @@ import tensorflow
 import keras 
 import random
 
+score=0
 environment=gym.make('CartPole-v1')
 
 states=environment.observation_space.shape[0]
@@ -14,3 +15,8 @@ actions
 
 environment.reset()
 environment.render()
+
+for episode in range(1,11):
+    states=environment.reset()
+    score=0
+    done=False
