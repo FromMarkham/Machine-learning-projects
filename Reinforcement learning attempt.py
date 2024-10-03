@@ -15,15 +15,16 @@ states
 actions
 
 environment.reset()
-environment.render()
+
 
 def model():
     pass
 
 for episode in range(1,11):
 
-    while True
     action=random.choice([0,1])
     states=environment.reset()
+    environment.render()
     score=0
     done=False
+    environment.step(action)
