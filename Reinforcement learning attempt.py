@@ -3,6 +3,7 @@ import gym
 import tensorflow 
 import keras 
 import random
+import numpy as np 
 
 score=0
 environment=gym.make('CartPole-v1')
@@ -16,7 +17,13 @@ actions
 environment.reset()
 environment.render()
 
+def model():
+    pass
+
 for episode in range(1,11):
+
+    while True
+    action=random.choice([0,1])
     states=environment.reset()
     score=0
     done=False
