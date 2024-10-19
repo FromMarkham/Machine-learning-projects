@@ -5,26 +5,25 @@ import keras
 import random
 import numpy as np 
 
-score=0
+
 environment=gym.make('CartPole-v1')
 
 states=environment.observation_space.shape[0]
 actions=environment.action_space.n
 
-states
-actions
+#states
+#actions
+#def the_model():
 
-environment.reset()
+episodes=10
 
+for i in range(episodes+1)
 
-def model():
-    pass
+    currentState=environment.reset()
 
-for episode in range(1,11):
-
-    action=random.choice([0,1])
-    states=environment.reset()
-    environment.render()
-    score=0
+    while not done:
+        environment.render()
+        action=random.choice([0,1])
+        currentState,reward,done,miscInfo=environment.step(action)
     done=False
     environment.step(action)
