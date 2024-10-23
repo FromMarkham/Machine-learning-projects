@@ -17,13 +17,19 @@ actions=environment.action_space.n
 
 episodes=10
 
-for i in range(episodes+1)
-
+for i in range(episodes+1):
+    score=0;
     currentState=environment.reset()
-
+    done=False
+    
     while not done:
         environment.render()
         action=random.choice([0,1])
-        currentState,reward,done,miscInfo=environment.step(action)
-    done=False
-    environment.step(action)
+        kkk,n_state,reward,done,info=environment.step(action)
+        score+=reward
+
+
+    print('i:{} score:{}',(i,score))
+
+
+    
