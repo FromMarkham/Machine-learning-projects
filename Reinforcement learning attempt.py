@@ -5,6 +5,9 @@ import keras
 import random
 import numpy as np 
 
+from tensorflow.keras.models import sequential
+from tensorflow.keras.layers import Dense, Flatten
+from tensorflow.keras.optimizers import adam 
 
 environment=gym.make('CartPole-v1')
 
@@ -31,5 +34,9 @@ for i in range(episodes+1):
 
     print('i:{} score:{}',(i,score))
 
+
+    
+def my_neural_network():
+    
 
     
