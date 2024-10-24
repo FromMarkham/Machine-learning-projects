@@ -36,7 +36,15 @@ for i in range(episodes+1):
 
 
     
-def my_neural_network():
+def my_neural_network(states,actions):
+    agent_cozmo=Sequential()
+
+    agent_cozmo.add(input_shape=(1,states))
+    agent_cozmo.add(Dense(45,activation='relu'))
+    agent_cozmo.add(Dense(45,activation='relu'))
+    agent_cozmo.add(Dense(actions,activation='linear'))
+
+    return agent_cozmo
     
 
     
