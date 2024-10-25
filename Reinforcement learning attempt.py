@@ -1,13 +1,13 @@
-#https://www.youtube.com/watch?v=cO5g5qLrLSo
+ #https://www.youtube.com/watch?v=cO5g5qLrLSo
 import gym 
 import tensorflow 
 import keras 
 import random
 import numpy as np 
 
-from tensorflow.keras.models import sequential
+from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten
-from tensorflow.keras.optimizers import adam 
+from tensorflow.keras.optimizers import Adam 
 
 environment=gym.make('CartPole-v1')
 
@@ -39,12 +39,12 @@ for i in range(episodes+1):
 def my_neural_network(states,actions):
     agent_cozmo=Sequential()
 
-    agent_cozmo.add(input_shape=(1,states))
+    agent_cozmo.add(Flatten(input_shape=(1,states)))
     agent_cozmo.add(Dense(45,activation='relu'))
     agent_cozmo.add(Dense(45,activation='relu'))
     agent_cozmo.add(Dense(actions,activation='linear'))
 
     return agent_cozmo
     
-
-    
+definetly_not_a_robot_player=my_neural_network(states,actions)
+definetly_not_a_robot_player.summary()
