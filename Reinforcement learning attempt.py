@@ -1,9 +1,13 @@
- #https://www.youtube.com/watch?v=cO5g5qLrLSo
+#https://www.youtube.com/watch?v=cO5g5qLrLSo
 import gym 
 import tensorflow 
 import keras 
 import random
 import numpy as np 
+
+from rl.agents import DQNAgent
+from rl.policy import BoltzmannQPolicy 
+from rl.memory import SequentialMemory
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten
@@ -40,8 +44,10 @@ def my_neural_network(states,actions):
     agent_cozmo=Sequential()
 
     agent_cozmo.add(Flatten(input_shape=(1,states)))
-    agent_cozmo.add(Dense(45,activation='relu'))
-    agent_cozmo.add(Dense(45,activation='relu'))
+    agent_cozmo.add(Dense(125,activation='relu'))
+    agent_cozmo.add(Dense(125,activation='sigmoid'))
+    agent_cozmo.add(Dense(125,activation='relu'))
+    agent_cozmo.add(Dense(125,activation='sigmoid'))
     agent_cozmo.add(Dense(actions,activation='linear'))
 
     return agent_cozmo
