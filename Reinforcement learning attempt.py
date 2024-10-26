@@ -54,3 +54,7 @@ def my_neural_network(states,actions):
     
 definetly_not_a_robot_player=my_neural_network(states,actions)
 definetly_not_a_robot_player.summary()
+
+def the_real_agent_cozmo(definetly_not_a_robot_player,actions):
+    
+    
