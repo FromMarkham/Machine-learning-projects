@@ -60,7 +60,9 @@ def the_real_agent_cozmo(definetly_not_a_robot_player,actions):
 
     q_learning_table=SequentialMemory(limit=100000,window_lenght=1)
     
-    dqn=DQNAgent(model=agent_cozmo,memory=q_learning_table,policy=da_policy,nb_actions=actions,nb_steps_warmup=10)
-
+    dqn=DQNAgent(model=agent_cozmo,memory=q_learning_table,policy=da_policy,nb_actions=actions,nb_steps_warmup=10,target_model_update=le-2)
+    return dqn #🗣️🗣️🗣️🔥🔥🔥💯💯💯
 
 dqn=the_real_agent_cozmo(definetly_not_a_robot_player,actions)
+dqn.compile(Adam(lr=le-3),metrics=['mae'])
+dqn.fit(environment,nb_steps=2000,visualize=False,verbose=1)
