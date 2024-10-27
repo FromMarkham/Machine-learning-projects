@@ -55,8 +55,12 @@ def my_neural_network(states,actions):
 definetly_not_a_robot_player=my_neural_network(states,actions)
 definetly_not_a_robot_player.summary()
 
-def the_real_agent_cozmo(definetly_not_a_robot_player,actions):
-    dqn=DQNAgent(model=agent_cozmo)
+def the_real_agent_cozmo(definetly_not_a_robot_player,actions): 
+    da_policy=BoltzmannQPolicy()
+
+    q_learning_table=SequentialMemory(limit=100000,window_lenght=1)
+    
+    dqn=DQNAgent(model=agent_cozmo,memory=q_learning_table,policy=da_policy,nb_actions=actions,nb_steps_warmup=10)
 
 
-dqn=the_real_agent_cozmo
+dqn=the_real_agent_cozmo(definetly_not_a_robot_player,actions)
