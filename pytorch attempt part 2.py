@@ -1,16 +1,15 @@
 
 import torch 
 import numpy
+#https://www.youtube.com/shorts/1KmTc0VuMms
 
-Xtrain,Ytrain=
+training=datasets.MNIST()
 
-Xtest,Ytest=
+testing=datasets.MNIST()
 
-dataloader1
-dataloader2
+dataloadertrain=DataLoader(dataset=training)
+dataloadertest=DataLoader(dataset=testing)
 
-dataloader3
-dataloader4
 
 class my_neural_network(nn.Module)
       def __init__(self):
