@@ -1,4 +1,17 @@
 
+import torch 
+import numpy
+
+Xtrain,Ytrain=
+
+Xtest,Ytest=
+
+dataloader1
+dataloader2
+
+dataloader3
+dataloader4
+
 class my_neural_network(nn.Module)
       def __init__(self):
           self.layer1=nn.Linear(100,100)
