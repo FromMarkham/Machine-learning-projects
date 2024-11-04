@@ -27,4 +27,9 @@ class my_neural_network(nn.Module)
             output=self.layer5wutdahelllohmygawdddddddd(output)
             
             return output 
-            
+
+scitechbois_model=my_neural_network()
+
+loss_function=nn.CrossEntropyLoss()
+
+optimisergradientdescent=torch.optim.Adam()
