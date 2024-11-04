@@ -1,6 +1,7 @@
 
 import torch 
 import numpy
+from torch.utils.data import DataLoader
 #https://www.youtube.com/shorts/1KmTc0VuMms
 
 training=datasets.MNIST()
