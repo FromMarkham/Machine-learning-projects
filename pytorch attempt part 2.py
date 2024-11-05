@@ -10,10 +10,13 @@ testing=datasets.MNIST()
 
 dataloadertrain=DataLoader(dataset=training)
 dataloadertest=DataLoader(dataset=testing)
-
+#https://www.youtube.com/watch?v=MBbVq_FIYDA
 
 class my_neural_network(nn.Module)
       def __init__(self):
+
+      super(my_neural_network,self,)
+      
           self.layer1=nn.Linear(100,100)
           self.layer2=nn.ReLU()
           self.layer3=nn.Linear(100,100)
