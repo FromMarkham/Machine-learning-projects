@@ -3,7 +3,12 @@
 #https://www.youtube.com/watch?v=pDdP0TFzsoQ
 
 class my_cnn(nn.module):
+      def __init__():
+      
       self.my_cnn_layer=nn.Conv2d(4,4,4)
       self.my_pooling_layer=nn.MaxPool2d()
       self.my_relu_layer=nn.ReLU()
-      self.a_percetron_later=nn.Linear()
+      self.a_perceptron_layer=nn.Linear()
+      self.another_perceptron_layer=nn.Linear()
+
+      def run_the_cnn():
