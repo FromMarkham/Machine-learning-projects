@@ -5,5 +5,5 @@
 class my_cnn(nn.module):
       self.my_cnn_layer=nn.Conv2d(4,4,4)
       self.my_pooling_layer=nn.MaxPool2d()
-
-      self.a_percetron_later=nn.Linear
+      self.my_relu_layer=nn.ReLU()
+      self.a_percetron_later=nn.Linear()
