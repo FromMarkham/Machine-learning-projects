@@ -1,4 +1,4 @@
-#https://www.geeksforgeeks.org/python-opencv-waitkey-function/
+
 import cv2  
 
 #video=cv.VideoCapture()
@@ -7,6 +7,8 @@ import cv2
 
 my_image=cv2.imread('/Users/bobwang/Downloads/33715.png')
 
-cv2.imshow('Robot',my_image)
+my_video=cv2.VideoCapture(1)
 
-cv2.waitKey(100000000)
+#cv2.imshow('Robot',my_image)
+
+#cv2.waitKey(100000000)
