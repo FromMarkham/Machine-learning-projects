@@ -5,6 +5,10 @@ from torch.optim.adam import Adam
 
 import lightning as L 
 from torch.utils.Data import TensorDataset, DataLoader 
+#https://www.youtube.com/@statquest/videos
+#https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html
+
+my_embeddings=nn.Embedding()
 
 class my_little_lstm_aww(L.LightningModule):
     mean=torch.tensor(0.5)
