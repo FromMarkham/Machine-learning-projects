@@ -15,7 +15,10 @@ class my_little_lstm_aww(L.LightningModule):
     standarddeviation=torch.tensor(1.0)
     
     def __init__(self):
-        self.weight=nn.Parameter()
+
+        super().__init__()
+        
+        self.weight=nn.Parameter(torch.normal(),requires_grad=True)
         
     def this_is_where_it_lives(self):
 
