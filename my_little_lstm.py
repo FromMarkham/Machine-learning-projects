@@ -19,6 +19,7 @@ class my_little_lstm_aww(L.LightningModule):
         super().__init__()
         
         self.weight=nn.Parameter(torch.normal(),requires_grad=True)
+        self.weight2=nn.Parameter(torch.normal(),requires_grad=True)
         
     def this_is_where_it_lives(self):
 
