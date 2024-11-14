@@ -9,9 +9,11 @@ from torch.utils.Data import TensorDataset, DataLoader
 #https://www.youtube.com/@statquest/videos
 #https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html
 #https://pytorch.org/tutorials/beginner/nlp/word_embeddings_tutorial.html
-#https://www.geeksforgeeks.org/word-embedding-in-pytorch/my_words_lmao={}
+#https://www.geeksforgeeks.org/word-embedding-in-pytorch/
 
-my_embeddings=nn.Embedding(2,5)
+my_words_lmao={}
+
+my_embeddings=nn.Embedding(200,500) #the number of words, the size of the word vectors. this is word embedding lol 
 
 class my_little_lstm_aww(L.LightningModule):
     mean=torch.tensor(0.5)
