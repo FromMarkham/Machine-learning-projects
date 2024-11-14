@@ -20,7 +20,8 @@ class my_little_lstm_aww(L.LightningModule):
         
         self.weight=nn.Parameter(torch.normal(),requires_grad=True)
         self.weight2=nn.Parameter(torch.normal(),requires_grad=True)
-        
+        self.bias=
+    
     def this_is_where_it_lives(self):
 
     def optimise_lstm(self):
