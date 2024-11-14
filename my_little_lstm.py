@@ -9,8 +9,7 @@ from torch.utils.Data import TensorDataset, DataLoader
 #https://www.youtube.com/@statquest/videos
 #https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html
 #https://pytorch.org/tutorials/beginner/nlp/word_embeddings_tutorial.html
-
-my_words_lmao={}
+#https://www.geeksforgeeks.org/word-embedding-in-pytorch/my_words_lmao={}
 
 my_embeddings=nn.Embedding(2,5)
 
