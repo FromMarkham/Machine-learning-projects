@@ -13,6 +13,8 @@ my_words_lmao={}
 
 my_embeddings=nn.Embedding(2,5)
 
+mynumbers=[1,32,243,1024,3125,7776,16807]
+
 class my_little_lstm_aww(L.LightningModule):
     mean=torch.tensor(0.5)
     standarddeviation=torch.tensor(1.0)
@@ -45,5 +47,14 @@ class my_little_lstm_aww(L.LightningModule):
     def train_network(self):
         
     def the_lstm_in_action(self,inputs,longmemory,shortmemory):
-        longterm_memory_percentage=torch.sigmoid()
-        shortterm_memory_percentage=torch.()
+        percent_long_term_to_remember=torch.sigmoid((shortmemory*weight)+(inputs*weight2)+bias)
+
+        potential_memory_to_remember=torch.sigmoid((shortmemory*weight3+(inputs*weight4)+bias1)
+        
+
+
+        potential_longterm_memery=torch.tanh((shortmemory*weight3)+(inputs*weight4)+bias2)
+
+        percent_output=torch.sigmoid((shortmemory*weight4+(inputs*weight5)+bias3)
+        
+        update_long_memeory=torch.tanh(updated_long_memory)*percent_output
