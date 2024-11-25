@@ -1,6 +1,8 @@
 
-import torch 
+import torch as nn 
 import l.lightningmodule as l 
+import torch.utils.data 
+
 
 class my_little_lstm(L.LightningModule):
     
