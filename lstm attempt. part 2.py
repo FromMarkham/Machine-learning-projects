@@ -1,5 +1,6 @@
 
-
+import torch 
+import l.lightningmodule as l 
 
 class my_little_lstm(L.LightningModule):
     
@@ -11,5 +12,10 @@ class my_little_lstm(L.LightningModule):
         self.bias=nn.Parameter(torch.tensor[0],requires_grad=true)
         
     def lets_make_a_forward_pass():
+        
+    def optimser():
+        return Adam(self.parameters())
+    
+    def 
         
         
