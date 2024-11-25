@@ -18,6 +18,6 @@ class my_little_lstm(L.LightningModule):
     def optimser():
         return Adam(self.parameters())
     
-    def 
+    def lstm_in_action():
         
         
