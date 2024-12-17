@@ -33,19 +33,24 @@ am=embeddings(amtensor)
 a=embeddings(atensor)
 robot=embeddings(robottensor)
 
-#print(hello)
-#print(everyone)
-#print(i)
-#print(am)
-#print(a)
-#print(robot)
+print(hello)
+print(everyone)
+print(i)
+print(am)
+print(a)
+print(robot)
 
-class oneHeadAttention(nn.Module):
+class MultiHeadAttention(nn.Module):
     def __init__(self,model_dimension,head_count):
+         super(MultiHeadAttention, self).__init__() #im inheriting from the multi headed attention class lol
+
+         assert model_dimenion%head_count==0 #making sure that Model dimension should be divisble by head count
          multi_headed_attention=torch.nn.MultiheadAttention(64,8)
 
 
-        #Model dimension should be divisble by head count
+        query=nn.Linear
+        key=nn.Linear()
+        value=nn.Linear()
 
 #def positional_encoding():
  #   PositionEmbeddingVector=torch.zeros(8,64)
