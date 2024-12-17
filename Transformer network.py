@@ -48,9 +48,14 @@ class MultiHeadAttention(nn.Module):
          multi_headed_attention=torch.nn.MultiheadAttention(64,8)
 
 
-        query=nn.Linear
-        key=nn.Linear()
-        value=nn.Linear()
+        query=nn.Linear(model_dimension)
+        key=nn.Linear(model_dimension)
+        value=nn.Linear(model_dimension)
+        output=nn.Linear(model_dimension)
+
+
+    def calculate_attention_scores():
+        
 
 #def positional_encoding():
  #   PositionEmbeddingVector=torch.zeros(8,64)
