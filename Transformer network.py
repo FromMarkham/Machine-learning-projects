@@ -54,9 +54,10 @@ class MultiHeadAttention(nn.Module):
         output=nn.Linear(model_dimension)
 
 
-    def calculate_attention_scores():
-        
+    def calculate_attention_scores(self,q,k,v):
+        attention_scores=torch.matmul(q,k)/math.sqrt()
 
+        attention_probabilities=torch.softmax(attention_scores)
 #def positional_encoding():
  #   PositionEmbeddingVector=torch.zeros(8,64)
   #  TensorPositionNumeratorVector=torch.arange(0,8)
@@ -69,4 +70,3 @@ class MultiHeadAttention(nn.Module):
 #
 #def forward()
     
-
