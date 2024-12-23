@@ -50,8 +50,8 @@ def my_positional_encoding(sentence_length=6,vector_length=6,n=10000):
     for kVectorposition in range(sentence_length):
         for i in np.arange(int(vector_length/2)):
             denominator=np.power
-            positionalEncodingVector=np.sin
-            positionalEncodingVector=np.sin
+            positionalEncodingVector[kVectorpositon,2*i]=np.sin
+            positionalEncodingVector[kVectorposition,2*i+1]=np.sin
            
             
     
