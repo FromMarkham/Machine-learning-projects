@@ -7,7 +7,7 @@ import copy
 
 import numpy as np
 import tensorflow as tf 
-
+#Yayyyy all da shit will import 
 #https://medium.com/@hunter-j-phillips/positional-encoding-7a93db4109e6
 #https://discuss.pytorch.org/t/positional-encoding/175953
 #https://www.datacamp.com/tutorial/building-a-transformer-with-py-torch
@@ -41,7 +41,6 @@ print(i)
 print(am)
 print(a)
 print(robot)
-
 #https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/
 
 def my_positional_encoding(sentence_length=6,vector_length=6,n=10000):
@@ -55,38 +54,42 @@ def my_positional_encoding(sentence_length=6,vector_length=6,n=10000):
            
             
     
+def my_positional_encoding(sentence_length,vector_length,n=10000):
+    positionalEncodingVector=np.zeros((sentence_length,vector_length))
+
+    for kVectorposition in range(sentence_length):
+        for i in np.arange(int(vector_length/2)):
+            denominator=np.power(n,2*i/sentence_length)
+            positionalEncodingVector[kVectorposition]=np.sin(kVectorposition/denominator)
+            positionalEncodingVector[kVectorposition]=np.sin(kVectorposition/denominator)
+           
+    return positionalEncodingVector
+
+positionvectors=my_positional_encoding(sentence_length=6,vector_length=6,n=10000)
+print(positionvectors)
     
- #   PositionEmbeddingVector=torch.zeros(8,64)
-#    TensorPositionNumeratorVector=torch.arange(0,8)
-#    VectorIndexDenominator=torch.exp(torch.arange(0,64,2))
-#https://www.datacamp.com/tutorial/building-a-transformer-with-py-torch#:~:text=class%20PositionalEncoding(nn.Module)%3A%0A%20%20%20%20def,%2C%20%3Ax.size(1)%5D
-#    PositionEmbeddingVector[;,0::2]=torch.sin(TensorPositionNumeratorVector)
-#    PositionEmbeddingVector[;,1::2]=torch.cos(VectorIndexDenominator)
-
-#    self.register_buffer()
 
 
-#positional_encoding()
+
+class MultiHeadAttention(nn.Module):
+    def __init__(self,model_dimension,head_count):
+         super(MultiHeadAttention, self).__init__() #im inheriting from the multi headed attention class lol
+
+         assert model_dimenion%head_count==0 #making sure that Model dimension should be divisble by head count
+         multi_headed_attention=torch.nn.MultiheadAttention(64,8)
 
 
-#class MultiHeadAttention(nn.Module):
-#    def __init__(self,model_dimension,head_count):
-#         super(MultiHeadAttention, self).__init__() #im inheriting from the multi headed attention class lol
-
-#         assert model_dimenion%head_count==0 #making sure that Model dimension should be divisble by head count
-#         multi_headed_attention=torch.nn.MultiheadAttention(64,8)
+        query=nn.Linear(model_dimension)
+        key=nn.Linear(model_dimension)
+        value=nn.Linear(model_dimension)
+        output=nn.Linear(model_dimension)
 
 
-#        query=nn.Linear(model_dimension)
-#        key=nn.Linear(model_dimension)
-#        value=nn.Linear(model_dimension)
-#        output=nn.Linear(model_dimension)
+    def calculate_attention_scores(self,q,k,v):
+        attention_scores=torch.matmul(q,k)/math.sqrt()
 
+        attention_probabilities=torch.softmax(attention_scores)
 
-#    def calculate_attention_scores(self,q,k,v):
-#        attention_scores=torch.matmul(q,k)/math.sqrt()
-
-#        attention_probabilities=torch.softmax(attention_scores)
 
 
 
