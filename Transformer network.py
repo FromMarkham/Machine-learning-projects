@@ -41,6 +41,9 @@ print(i)
 print(am)
 print(a)
 print(robot)
+
+centralwordvector=torch.cat(hello,i,am,a,robot)
+
 #https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/
 
 def my_positional_encoding(sentence_length=6,vector_length=6,n=10000):
@@ -69,7 +72,7 @@ positionvectors=my_positional_encoding(sentence_length=6,vector_length=6,n=10000
 print(positionvectors)
     
 
-
+wordsplusposition=torch.cat(positionvectors,centralwordvector)
 
 class MultiHeadAttention(nn.Module):
     def __init__(self,model_dimension,head_count):
