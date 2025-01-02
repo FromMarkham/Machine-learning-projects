@@ -82,35 +82,5 @@ positionvectorstensor6=torch.from_numpy(f)
 
 
 cattedposition=torch.cat((positionvectorstensor,positionvectorstensor2,positionvectorstensor3,positionvectorstensor4,positionvectorstensor5,positionvectorstensor6),-1)
-
-#https://discuss.pytorch.org/t/using-pytorch-from-source-cat-argument-tensors-position-1-must-be-tuple-of-variables-not-variable/9200/3
-
-#print([centralWordEmbeddingVector])
-
-#Nahhhh bro the positional encoding function dont need the word embedding vectors as arguments cuz the positional encoding vector finna 
-#Be the same for every position so you can just add that vector to the word embedding vector
-
-
-#class MultiHeadAttention(nn.Module):
-   # def __init__(self,model_dimension,head_count):
-     #    super(MultiHeadAttention, self).__init__() #im inheriting from the multi headed attention class lol
-
-     #    assert model_dimenion%head_count==0 #making sure that Model dimension should be divisble by head count
-     #    multi_headed_attention=torch.nn.MultiheadAttention(64,8)
-
-
-     #   query=nn.Linear(model_dimension)
-    #    key=nn.Linear(model_dimension)
-     #   value=nn.Linear(model_dimension)
-    #    output=nn.Linear(model_dimension)
-
-
-   # def calculate_attention_scores(self,q,k,v):
-     #   attention_scores=torch.matmul(q,k)/math.sqrt()
-
-     #   attention_probabilities=torch.softmax(attention_scores)
-
-
-
-    
-    
+#https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html
+my_multiheaded_attention=nn.MultiheadAttention()
